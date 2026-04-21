@@ -1,4 +1,4 @@
-name: UBI-IB Main Collection Sharepoint Upload
+name: Collection Sharepoint Upload
 on:
   release:
     types: [edited, released]
