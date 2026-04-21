@@ -443,8 +443,8 @@ jobs:
           merge-multiple: true
           path: ${{ vars.COLLECTOR }}
 
-      - name: Copy Markdowns to ISO
-        run: cp -v *.md ISO/
+      - name: Copy Markdowns to ${{ vars.COLLECTOR }}
+        run: cp -v *.md ${{ vars.COLLECTOR }}/
 
       # Download Binaries if needed
       # Binaries Downloaded
