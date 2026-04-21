@@ -78,7 +78,6 @@ jobs:
       - name: Create Pull Request to Main
         env:
           GH_TOKEN: ${{ github.token }}
-          BRANCH_NAME: "version-bump-develop-to-main-${{ github.run_id }}"
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -88,10 +87,9 @@ jobs:
             exit 0
           fi
 
-          git checkout -b "$BRANCH_NAME"
           git add "${{ vars.COLLECTOR }}.yml"
           git commit -m "chore: bump container versions for main release"
-          git push origin "$BRANCH_NAME"
+          git push origin develop
 
           gh pr create \
             --title "🚀 Release: Version Bump develop -> main (${{ vars.COLLECTOR }})" \
@@ -99,4 +97,4 @@ jobs:
             
             **Triggered by:** @${{ github.actor }}" \
             --base main \
-            --head "$BRANCH_NAME"
+            --head develop
