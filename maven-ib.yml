@@ -1,5 +1,5 @@
 registry1.dso.mil:
   images-by-tag-regex:
-    ironbank/opensource/maven/maven-openjdk-25: ^3.9.14$
-    ironbank/opensource/maven/maven-openjdk-21: ^3.9.14$
+    ironbank/opensource/maven/maven-openjdk-25: ^3.9.15$
+    ironbank/opensource/maven/maven-openjdk-21: ^3.9.15$
     ironbank/opensource/maven/maven-openjdk-17: ^3.9.13$
